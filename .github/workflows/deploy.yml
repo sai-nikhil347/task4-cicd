@@ -20,5 +20,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /var/www/html
-            echo "<h1>Deployment Successful from GitHub Actions</h1>" > index.html
+              sudo bash -c 'echo "<h1>Deployment Successful from GitHub Actions</h1>" > /var/www/html/index.html'
